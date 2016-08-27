@@ -1,0 +1,18 @@
+PlotWord <- function(sel, silent = TRUE) {
+comp = getWord(dat,Dates,outAll[[sel]]$WordInfo$End,
+               outAll[[sel]]$WordInfo$Start, wordSize, Nletters, makePlots=T)
+if(!silent) { return(comp) }
+  
+}
+TOP_Ten_Score1 =sort(expandedLetterScore_1_out, decreasing = TRUE, index.return = TRUE)$ix[1:10]
+pdf("top10.pdf")
+for(i in TOP_Ten_Score1)
+{
+  PlotWord(i)
+  
+}
+dev.off()  
+}
+
+
+## Found in version 7
